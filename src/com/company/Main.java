@@ -18,11 +18,8 @@ public class Main {
             } catch (LimitException limitException) {
                 System.out.println(limitException.getMessage());
                 isAmountEnough = true;
-                int sumTowithdraw = 0;
-                System.out.println("Введите желаюему сумму: " + sumTowithdraw);
-                sumTowithdraw = scanner.nextInt();
                 try {
-                    userAccount.withdraw(sumTowithdraw);
+                    userAccount.withdraw(userAccount.getAmount());
                 } catch (LimitException e) {
                     e.printStackTrace();
                 }

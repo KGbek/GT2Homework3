@@ -20,6 +20,7 @@ public class BankAccount extends LimitException{
     }
 
     public double getAmount() {
+//        amount = getRemainingAmount();
         return amount;
     }
 
